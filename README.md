@@ -99,21 +99,6 @@ npm run dev
 
 ---
 
-## 🧪 Seed Data & Sample Credentials
-
-For assessment purposes, you can use the following credentials to test the platform. *(Note: If the application includes a seed script, run `npm run seed` in the backend directory first. Otherwise, register these users via the Auth UI or Swagger API).*
-
-**Admin Account:**
-
-* **Email:** `admin@lms.com`
-* **Password:** `admin123`
-* *Role:* Full CRUD access, can upload/assign videos, and view learner metrics.
-
-**Learner Account:**
-
-* **Email:** `learner@lms.com`
-* **Password:** `learner123`
-* *Role:* Can view assigned videos, answer checkpoints, and auto-resume progress.
 
 ---
 
