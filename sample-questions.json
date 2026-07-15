@@ -1,0 +1,43 @@
+[
+  {
+    "timestamp": 15,
+    "type": "SINGLE_CHOICE",
+    "text": "What is the main objective of this training module?",
+    "options": [
+      "Understanding cloud infrastructure",
+      "Learning React basics",
+      "Mastering database optimization",
+      "Designing UI components"
+    ],
+    "correctAnswers": [
+      "Understanding cloud infrastructure"
+    ]
+  },
+  {
+    "timestamp": 45,
+    "type": "MULTI_CHOICE",
+    "text": "Which of the following are valid database types? (Select all that apply)",
+    "options": [
+      "Relational (SQL)",
+      "Document (NoSQL)",
+      "HTML",
+      "CSS"
+    ],
+    "correctAnswers": [
+      "Relational (SQL)",
+      "Document (NoSQL)"
+    ]
+  },
+  {
+    "timestamp": 120,
+    "type": "SINGLE_CHOICE",
+    "text": "Is this statement True or False: Docker containers share the host operating system's kernel.",
+    "options": [
+      "True",
+      "False"
+    ],
+    "correctAnswers": [
+      "True"
+    ]
+  }
+]

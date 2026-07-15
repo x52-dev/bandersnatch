@@ -1,0 +1,45 @@
+version: '3.8'
+
+services:
+  # 1. MongoDB Database Container
+  mongodb:
+    image: mongo:latest
+    container_name: lms-mongodb
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongodb_data:/data/db
+    restart: unless-stopped
+
+  # 2. NestJS Backend Container
+  backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    container_name: lms-backend
+    ports:
+      - "3000:3000"
+    environment:
+      # This tells NestJS to connect to the 'mongodb' container, not 'localhost'
+      - MONGODB_URI=mongodb://mongodb:27017/lms_database
+      - JWT_SECRET=your_super_secret_jwt_key
+    volumes:
+      - ./backend/uploads:/usr/src/app/uploads
+    depends_on:
+      - mongodb
+    restart: unless-stopped
+
+  # 3. React/Vite Frontend Container
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    container_name: lms-frontend
+    ports:
+      - "8080:80" # Maps port 80 inside the container to 8080 on your computer
+    depends_on:
+      - backend
+    restart: unless-stopped
+
+volumes:
+  mongodb_data: # Persists your database even if the container is destroyed
