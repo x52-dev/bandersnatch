@@ -1,0 +1,45 @@
+# =========================
+# Node.js & Dependencies
+# =========================
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+package-lock.json # Only ignore if you are strictly using yarn/pnpm (Otherwise, keep this!)
+
+# =========================
+# Environment Variables (CRITICAL)
+# =========================
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+*.pem
+
+# =========================
+# Build Outputs
+# =========================
+# NestJS Backend
+/backend/dist/
+/backend/build/
+
+# React/Vite Frontend
+/frontend/dist/
+/frontend/build/
+
+# =========================
+# Local Uploads & Data
+# =========================
+# Prevents Docker volumes or local video uploads from blowing up your repo size
+/backend/uploads/*
+!/backend/uploads/.gitkeep # Keeps the folder structure without tracking the files inside
+
+# =========================
+# OS & IDE Files
+# =========================
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.swp
