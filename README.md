@@ -1,4 +1,3 @@
-
 # 🎓 Interactive Video Learning Platform (LMS)
 
 A full-stack Learning Management System (LMS) built to empower educators and learners. Admins can upload videos, design interactive timeline-based quizzes, and track detailed learner analytics. Learners get a seamless, anti-cheat viewing experience with bulletproof auto-resume capabilities.
@@ -45,8 +44,8 @@ The easiest way to run the entire stack (Database, Backend, Frontend) is using D
 * [Docker Desktop](https://www.docker.com/products/docker-desktop) installed and running.
 
 ### 1. Environment Variables
-
-Create a `.env` file in the `backend` directory (if not already present) with the following:
+Rename .env.example in both frontend and backen to .env or,
+Create a `.env` file in the `backend` directory (if not already present) with the following :
 
 ```env
 PORT=3000
